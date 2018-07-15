@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#IDE
+.idea/
+
+#config
+data.ini
+config.py
