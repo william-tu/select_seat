@@ -1,15 +1,15 @@
 # coding:utf-8
+import datetime
+import os
+import time
+
 import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
+from selenium.webdriver.support.ui import WebDriverWait
+
 from config import config
-import datetime
-import os
-import json
-import ConfigParser
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -53,13 +53,13 @@ for name in cookies:
     cookies[name] = browser.get_cookie(name)['value']
 # browser.get("https://jxnu.huitu.zhishulib.com/#!/Space/Category/list?category_id=591")
 
-# browser.close()
+browser.close()
+
+
 # c = ConfigParser.ConfigParser()
 # c.add_section('')
 # c.write(open(data_path, 'w'))
 # print c.sections()
-
-exit(1)
 
 
 def select_seat():
